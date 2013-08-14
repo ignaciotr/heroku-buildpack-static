@@ -84,9 +84,6 @@ http {
     #Specify a charset
     charset utf-8;
 
-    # Custom 404 page
-    error_page 404 /404.html;
-
     # Expire rules for static content
 
     # Built-in filename-based cache busting
@@ -129,7 +126,7 @@ http {
 
     # Media: images, video, audio, HTC
     location ~* \.(?:jpg|jpeg|gif|png|ico|gz|svg|svgz|mp4|ogg|ogv|webm)$ {
-      expires 1M;
+      expires 1y;
       access_log off;
       add_header Cache-Control "public";
     }
